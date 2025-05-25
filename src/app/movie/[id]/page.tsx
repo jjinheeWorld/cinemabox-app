@@ -85,7 +85,7 @@ async function ReviewList({ movieId }: { movieId: string }) {
   return (
     <section>
       {reviews.map((review) => (
-        <ReviewItem key={`review-item-${movieId}`} {...review} />
+        <ReviewItem key={`review-item-${review.id}`} {...review} />
       ))}
     </section>
   );
