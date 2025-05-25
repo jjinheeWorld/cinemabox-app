@@ -2,6 +2,7 @@ import { MovieData, ReviewData } from "@/types";
 import style from "./page.module.css";
 import { notFound } from "next/navigation";
 import ReviewItem from "@/component/review-item";
+import ReviewEditor from "@/component/review-editor";
 
 export const dynamicParams = false;
 
@@ -100,6 +101,7 @@ export default async function Page({
   return (
     <div className={style.container}>
       <MovieDetail movieId={id} />
+      <ReviewEditor />
       <ReviewList movieId={id} />
     </div>
   );
